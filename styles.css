@@ -41,9 +41,15 @@ h1
     font-size: 2.5em;
     font-family: 'Pacifico', cursive;
     color: whitesmoke;
-    text-shadow:dimgray 5px 5px 10px;
+    text-shadow:black 5px 5px 10px;
     margin: 0;
 }
+
+h4
+{
+    margin-top: 2em;
+}
+
 
 .testEl
 {
@@ -63,6 +69,23 @@ a:visited
 a:hover
 {
     color: whitesmoke;
+}
+
+.orderForm
+{
+    background-color: dimgray;
+    color: whitesmoke;
+    padding: 2.5em;
+}
+
+.orderRec
+{
+    background-color: whitesmoke;
+}
+
+.mainForm
+{
+    margin-top: 5em;
 }
 
 
