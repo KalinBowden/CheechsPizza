@@ -2,3 +2,67 @@
 Dev:    Kalin Bowden
 Date:   
 */
+
+body
+{
+    background-color: green;
+    color: Black;
+}
+
+.container-fluid
+{
+    padding: 0;
+}
+
+header
+{
+    background-color: brown;
+    background: linear-gradient(90deg ,#DC143C, firebrick);
+    font-size: 1.35em;
+    padding-top: .7em;
+}
+
+header p
+{
+    font-size: 1.2em;
+    color: whitesmoke;
+    font-family: 'Gudea', sans-serif;
+    margin: 0;
+    
+}
+
+.titleLink
+{
+    padding-top: 15%;
+}
+
+h1
+{
+    font-size: 2.5em;
+    font-family: 'Pacifico', cursive;
+    color: whitesmoke;
+    text-shadow:dimgray 5px 5px 10px;
+    margin: 0;
+}
+
+.testEl
+{
+    background-color: green;
+}
+
+a:link
+{
+    color: whitesmoke;
+}
+
+a:visited
+{
+    color: whitesmoke;
+}
+
+a:hover
+{
+    color: whitesmoke;
+}
+
+
