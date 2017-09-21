@@ -12,6 +12,7 @@ body
 .container-fluid
 {
     padding: 0;
+    height: 100em;
 }
 
 header
@@ -73,19 +74,34 @@ a:hover
 
 .orderForm
 {
-    background-color: dimgray;
+    background: linear-gradient(dimgray, darkslategray);
     color: whitesmoke;
     padding: 2.5em;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 .orderRec
 {
     background-color: whitesmoke;
+    height: 45em;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .mainForm
 {
     margin-top: 5em;
+}
+
+.glify
+{
+    font-size: 2em;
+}
+
+.pizzaBox
+{
+    margin-bottom: 1em;
 }
 
 
