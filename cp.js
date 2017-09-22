@@ -9,6 +9,7 @@ var custPhone;
 var subTotal = 0.0;
 var taxRate = 7.6;
 var orderTotal = 0.0;
+var count = 0;
 
 
 // Content Arrays
@@ -81,7 +82,7 @@ function buildSelectionRow()
 {
     var testString = "";
 
-    testString = '<div class="row pizzaBox">' +
+    testString = '<div class="row pizzaBox" id="row' + (count++) + '">' +
                     '<div class="col-md-8">' +
                         buildPizzaColoumn() +
                     '</div>' +
@@ -94,6 +95,7 @@ function buildSelectionRow()
                 '</div>';
 
     alert(testString);
-    document.write(testString);
+    
+    var myDoc = document.getElementById("orderSec").innerHTML += testString;
 
 }
