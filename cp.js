@@ -18,11 +18,27 @@ var orderedPizzas;
 var amtOfPizzas;
 
 
-
+// Get the customers name and phone number.
 function getCustomerInfo()
 {
     custName = document.getElementById("custName").value;
     custPhone = document.getElementById("custPhone").value;
+}
 
-    alert(custName + " " + custPhone);
+// add the different falvors of pizza
+function addFlavors()
+{
+    for (var index = 0; index < pizzaTypes.length; index++)
+    {
+        testString += pizzaTypes[index] + " - " + pizzaPrices[index];
+    }
+}
+
+// Add the number of choices;
+function addNumChoices()
+{
+    for (var index = 0; index < 10; index++)
+    {
+        testString += '<option>' + (index + 1) +'</opyion>';
+    }
 }
