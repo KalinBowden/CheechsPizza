@@ -80,6 +80,13 @@
            Lets Get Started!
          </h3>
 
+         <!-- Progress Bar -->
+         <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+            <span class="sr-only">40% Complete (success)</span>
+          </div>
+        </div>
+
          <!-- Order Options -->
          <div class="row">
             <!-- User  Information -->
@@ -89,14 +96,14 @@
               <h4 class="text-left">Tell us, who is ordering the pizza?</h4>
               <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1">@</span>
-                <input type="text" class="form-control" placeholder="We will call you anything!" aria-describedby="sizing-addon1">
+                <input type="text" class="form-control" placeholder="We will call you anything!" aria-describedby="sizing-addon1" id="custName">
               </div>
 
               <!-- Prompt user for phone number -->
               <h4 class="text-left">When the pizza is ready, what number do you want us to call?</h4>
               <div class="input-group input-group-lg">
                 <span class="input-group-addon" id="sizing-addon1">@</span>
-                <input type="text" class="form-control" placeholder="No Spam calls, Promise..." aria-describedby="sizing-addon1">
+                <input type="text" class="form-control" placeholder="No Spam calls, Promise..." aria-describedby="sizing-addon1" id="custPhone">
               </div>
 
               <!-- Title text -->
@@ -149,57 +156,9 @@
                 </div>
             </div>
 
-            <div class="row pizzaBox">
-                <div class="col-md-8">
 
-                  <select class="form-control">
-                    <option>Cheese</option>
-                    <option>Peperoni</option>
-                    <option>Veggie</option>
-                    <option>Meat</option>
-                    <option>Combination</option>
-                  </select>
-                  
-                </div>
-                <div class="col-md-3">
-                  <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="col-md-1">
-                  <span class="glyphicon glyphicon-plus glify" aria-hidden="true"></span>
-                </div>
-            </div>
 
-            <div class="row pizzaBox">
-                <div class="col-md-8">
-
-                  <select class="form-control">
-                    <option>Cheese</option>
-                    <option>Peperoni</option>
-                    <option>Veggie</option>
-                    <option>Meat</option>
-                    <option>Combination</option>
-                  </select>
-                  
-                </div>
-                <div class="col-md-3">
-                  <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="col-md-1">
-                  <span class="glyphicon glyphicon-plus glify" aria-hidden="true"></span>
-                </div>
-            </div>
+            <button type="button" class="btn btn-default" id="btnOrder" onclick="getCustomerInfo()">Order Pizza</button>
 
           </div>
 
@@ -223,5 +182,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="cp.js"></script>
   </body>
 </html>
