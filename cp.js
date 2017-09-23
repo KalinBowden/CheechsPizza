@@ -60,7 +60,7 @@ function buildPizzaColoumn()
 {
     var testString = "";
 
-    testString = '<select class="form-control">' + addFlavors() + '</select>';
+    testString = '<select class="form-control" id="select' + count + '">' + addFlavors() + '</select>';
 
     return testString;
 }
@@ -71,7 +71,7 @@ function buildNumberColoumn()
 {
     var testString = "";
     
-    testString = '<select class="form-control">' + addNumChoices() + '</select>';
+    testString = '<select class="form-control" id="amt' + count +'">' + addNumChoices() + '</select>';
     
     return testString;
 }
@@ -121,3 +121,23 @@ function addMinusSwitch(row)
         removeRowSelection(row);
     }
 }
+
+//=====================================================================================
+
+
+function calculateOrder()
+{
+    getCustomerInfo();
+
+    var testString = document.getElementById("select" + count).value;
+    testString += " ";
+    testString += document.getElementById("amt" + count).value;
+
+    amtOfPizzas = document.getElementById("amt" + count).value;
+    orderedPizzas = document.getElementById("select" + count).selectedIndex;
+
+    alert(custName + " " + custPhone + " " + testString + " " + orderedPizzas );
+}
+
+//
+window.addEventListener("load",buildSelectionRow, false)
