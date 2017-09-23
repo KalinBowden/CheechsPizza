@@ -14,7 +14,7 @@ var count = 0;
 
 // Content Arrays
 var pizzaTypes = ["Cheese", "Pereroni", "Meat", "Veggie", "Hawaiian"];
-var pizzaPrices = ["$5.00","$7.00","$10,00","$6.00", "$9.00"];
+var pizzaPrices = [5.00,7.00,10.00,6.00, 9.00];
 var orderedPizzas;
 var amtOfPizzas;
 
@@ -34,7 +34,7 @@ function addFlavors()
 
     for (var index = 0; index < pizzaTypes.length; index++)
     {
-        testString += '<option>' + pizzaTypes[index] + ' - ' + pizzaPrices[index] + '</option>';
+        testString += '<option>' + pizzaTypes[index] + ' - $' + pizzaPrices[index] + '.00</option>';
     }
 
     return testString;
@@ -90,12 +90,34 @@ function buildSelectionRow()
                         buildNumberColoumn() +
                     '</div>' +
                     '<div class="col-md-1">' +
-                        '<span class="glyphicon glyphicon-plus glify" aria-hidden="true"></span>' +
+                        '<span class="glyphicon glyphicon-plus glify" aria-hidden="true"  id="act' + count + '" onclick="removeRowSelection(' + (count - 1) + ')" ></span>' +
                     '</div>' +
                 '</div>';
+
+    if (count > 1)
+    {
+        var prevSelection = document.getElementById("act" + (count - 1)).className = "glyphicon glyphicon-minus glify";
+    }
 
     alert(testString);
     
     var myDoc = document.getElementById("orderSec").innerHTML += testString;
 
+}
+
+function removeRowSelection(row)
+{
+    var myRow = document.getElementById("row" + row).innerHTML = '';
+}
+
+function addMinusSwitch(row)
+{
+    if(row === count)
+    {
+        buildSelectionRow();
+    }
+    else
+    {
+        removeRowSelection(row);
+    }
 }
