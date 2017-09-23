@@ -7,7 +7,7 @@ Date:
 var custName = "John Smith";
 var custPhone;
 var subTotal = 0.0;
-var taxRate = 7.6;
+var taxRate = 0.076;
 var orderTotal = 0.0;
 var count = 0;
 
@@ -98,8 +98,6 @@ function buildSelectionRow()
     {
         var prevSelection = document.getElementById("act" + (count - 1)).className = "glyphicon glyphicon-minus glify";
     }
-
-    alert(testString);
     
     var myDoc = document.getElementById("orderSec").innerHTML += testString;
 
@@ -127,17 +125,40 @@ function addMinusSwitch(row)
 
 function calculateOrder()
 {
-    getCustomerInfo();
-
-    var testString = document.getElementById("select" + count).value;
-    testString += " ";
-    testString += document.getElementById("amt" + count).value;
-
+    //
+    var choice = document.getElementById("select" + count).selectedIndex;
+    var rec = document.getElementById("rec");
     amtOfPizzas = document.getElementById("amt" + count).value;
-    orderedPizzas = document.getElementById("select" + count).selectedIndex;
 
-    alert(custName + " " + custPhone + " " + testString + " " + orderedPizzas );
+    //
+    getCustomerInfo();
+    rec.innerHTML += ('<div class="col-md-6 text-left">Name</div><div class="col-md-6 text-right">' + custName + '</div>');
+    rec.innerHTML += ('<div class="col-md-6 text-left">Phone</div><div class="col-md-6 text-right">' + custPhone + '</div>');
+    
+    //
+    rec.innerHTML += ('<div class="col-md-6 text-left">Flavor</div><div class="col-md-6 text-right">' + pizzaTypes[choice] + '</div>');
+    rec.innerHTML += ('<div class="col-md-6 text-left">Number Of Pizzas</div><div class="col-md-6 text-right">' + amtOfPizzas + '</div>');
+
+    //
+    getSubTotal(choice);
+    rec.innerHTML += ('<div class="col-md-6 text-left">Sub Total</div><div class="col-md-6 text-right">' + subTotal + '.00</div>');
+
+    //
+    totalTax = subTotal * taxRate;
+    rec.innerHTML += ('<div class="col-md-6 text-left">Tax</div><div class="col-md-6 text-right">' + totalTax + '</div>');
+
+    //
+    orderTotal = subTotal + totalTax;
+    rec.innerHTML += ('<div class="col-md-6 text-left">Total</div><div class="col-md-6 text-right">$' + orderTotal + '</div>');
+}
+
+
+
+function getSubTotal(choice)
+{
+    subTotal = pizzaPrices[choice] * amtOfPizzas;
 }
 
 //
-window.addEventListener("load",buildSelectionRow, false)
+window.addEventListener("load",buildSelectionRow, false);
+document.getElementById("btnOrder").addEventListener("click", calculateOrder, false);

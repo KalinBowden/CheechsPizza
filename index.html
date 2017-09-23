@@ -39,8 +39,8 @@
               <div class="col-md-4 text-right"></div><!---->
 
 
-              <div class="col-md-4 text-right titleLink"><a href="#"><strong>Home</strong></a></div>
-              <div class="col-md-4 text-right titleLink"><a href="#"><strong>Order</strong></a></div>
+              <div class="col-md-4 titleLink"><a href="#"><strong>Home</strong></a></div>
+              <div class="col-md-4 titleLink"><a href="#"><strong>Order</strong></a></div>
             </div>
           </div>
 
@@ -56,8 +56,8 @@
           </div>
           <div class="col-md-2">
             <div class="row">
-              <div class="col-md-4 text-left titleLink"><a href="#"><strong>Pizza</strong></a></div>
-              <div class="col-md-4 text-left titleLink"><a href="#"><strong>Events</strong></a></div>
+              <div class="col-md-4 titleLink"><a href="#"><strong>Pizza</strong></a></div>
+              <div class="col-md-4 titleLink"><a href="#"><strong>Events</strong></a></div>
               <div class="col-md-4 text-right"></div>
             </div>
           </div>
@@ -80,12 +80,12 @@
            Lets Get Started!
          </h3>
 
-         <!-- Progress Bar -->
+         <!-- Progress Bar 
          <div class="progress">
           <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
             <span class="sr-only">40% Complete (success)</span>
           </div>
-        </div>
+        </div>-->
 
          <!-- Order Options -->
          <div class="row">
@@ -156,11 +156,13 @@
                 </div>
               </div>-->
 
-              <div id="orderSec"></div>
+              <div id="orderSec">
+                
+              </div>
 
 
 
-            <button type="button" class="btn btn-default" id="btnOrder" onclick="calculateOrder()">Order Pizza</button>
+            <button type="button" class="btn btn-default" id="btnOrder">Order Pizza</button>
 
           </div>
 
@@ -168,9 +170,10 @@
           </div>
 
         </div>
-        <div class="col-md-3 orderRec">
+        <div class="col-md-3 orderRec" id="rec">
+          <h2>Order Total</h2>
 
-
+          
 
         </div>
         <div class="col-md-2"></div>
