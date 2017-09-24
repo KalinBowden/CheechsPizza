@@ -12,7 +12,6 @@ body
 .container-fluid
 {
     padding: 0;
-    height: 100em;
 }
 
 header
@@ -85,7 +84,7 @@ a:hover
 .orderRec
 {
     background-color: whitesmoke;
-    height: 41.55em;
+    /*height: 41.55em;*/
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
     color: black;
@@ -94,6 +93,7 @@ a:hover
 .mainForm
 {
     margin-top: 5em;
+    background-color: grey;
 }
 
 .glify

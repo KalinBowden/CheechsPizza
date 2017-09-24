@@ -101,8 +101,15 @@ function buildSelectionRow()
     
     var myDoc = document.getElementById("orderSec").innerHTML += testString;
 
+
+    //
+    var temp = document.getElementById("rec").style.height = document.getElementById("ord").style.height;
+
 }
 
+
+
+// This function has been removed
 function removeRowSelection(row)
 {
     var myRow = document.getElementById("row" + row).innerHTML = '';
@@ -123,6 +130,8 @@ function addMinusSwitch(row)
 //=====================================================================================
 
 
+// This function will calculate the order totals, tax and subtotal.
+// Then diplay tha  information on the screen
 function calculateOrder()
 {
     //
@@ -153,12 +162,12 @@ function calculateOrder()
 }
 
 
-
+// Gets the subtaol of the order based on the user selection
 function getSubTotal(choice)
 {
     subTotal = pizzaPrices[choice] * amtOfPizzas;
 }
 
-//
+// The event listeners of the scripting page
 window.addEventListener("load",buildSelectionRow, false);
 document.getElementById("btnOrder").addEventListener("click", calculateOrder, false);
