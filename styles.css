@@ -88,12 +88,22 @@ a:hover
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
     color: black;
+    position: relative;
+    height: 100%;
+
+}
+
+.orderRec div
+{
+    padding-top: 1em;
+    padding-bottom: .5em;
+    font-size: 1.3em;
 }
 
 .mainForm
 {
     margin-top: 5em;
-    background-color: grey;
+    position: absolute;
 }
 
 .glify

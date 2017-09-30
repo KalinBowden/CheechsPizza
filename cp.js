@@ -146,7 +146,7 @@ function calculateOrder()
     
     //
     rec.innerHTML += ('<div class="col-md-6 text-left">Flavor</div><div class="col-md-6 text-right">' + pizzaTypes[choice] + '</div>');
-    rec.innerHTML += ('<div class="col-md-6 text-left">Number Of Pizzas</div><div class="col-md-6 text-right">' + amtOfPizzas + '</div>');
+    rec.innerHTML += ('<div class="col-md-6 text-left">Pizzas Ordered</div><div class="col-md-6 text-right">' + amtOfPizzas + '</div>');
 
     //
     getSubTotal(choice);
